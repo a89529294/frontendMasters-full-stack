@@ -1,6 +1,8 @@
 const http = require("http");
 
 const server = http.createServer(function (req, res) {
+  console.log(req.url);
+  console.log(req.url.startsWith("/api"));
   if (req.url.startsWith("/api")) {
     const responseObject = { message: "This is a JSON response" };
     res.writeHead(200, {

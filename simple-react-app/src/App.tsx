@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://127.0.01:3000/api/anything");
+        const response = await fetch(`${import.meta.env.BASE_URL}api/anything`);
         const object = await response.json();
         setData({
           loading: false,
